@@ -30,19 +30,61 @@ function initMap() {
 
   if (pathConfig) {
     const pathCoordinates = [];
+    const markers = {}, infoWindows = {};
+    let lat = null, lng = null, markerLabel = null, infoWindowContent = null;
     for (let p = 0; p < pathConfig.length; p++) {
+      lat = null, lng = null, markerLabel = null, infoWindowContent = null;
       if (pathConfig[p].hasOwnProperty('lat') && pathConfig[p].hasOwnProperty('lng')) {
-        pathCoordinates.push({ lat: pathConfig[p].lat, lng: pathConfig[p].lng });
-      } else if (pathConfig[p].length == 2) {
-        pathCoordinates.push({ lat: pathConfig[p][0], lng: pathConfig[p][1] });
+        lat = pathConfig[p].lat;
+        lng = pathConfig[p].lng;        
+      } else if (pathConfig[p].length >= 2) {
+        lat = pathConfig[p][0];
+        lng = pathConfig[p][1];
+      }
+
+      if (lat && lng) {
+        if (pathConfig[p].hasOwnProperty('marker')) {
+          markerLabel = pathConfig[p].marker;
+        } else if (pathConfig[p].length >= 3) {
+          markerLabel = pathConfig[p][2];
+        }
+
+        pathCoordinates.push({ lat: lat, lng: lng });
+
+        if (markerLabel) {
+          markers[p] = new google.maps.Marker({
+            position: { lat: lat, lng: lng },
+            map: map,
+            label: markerLabel
+          });
+
+          if (pathConfig[p].hasOwnProperty('infoWindowContent')) {
+            infoWindowContent = pathConfig[p].infoWindowContent;
+          } else if (pathConfig[p].length >= 4) {
+            infoWindowContent = pathConfig[p][3];
+          }
+          
+          if (infoWindowContent) {
+            infoWindows[p] = new google.maps.InfoWindow({
+              content: infoWindowContent
+            });
+
+            markers[p].addListener("click", () => {
+              infoWindows[p].open({
+                anchor: markers[p],
+                map,
+              });
+            });
+          }
+        }
       }
     }
 
     const path = new google.maps.Polyline({
       path: pathCoordinates,
-      strokeColor: "#FF0000",
+      strokeColor: "#FF824A",
       strokeOpacity: 1.0,
-      strokeWeight: 1,
+      strokeWeight: 3,
     });
 
     path.setMap(map);
