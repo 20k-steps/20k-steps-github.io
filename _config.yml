@@ -19,19 +19,23 @@
 # in the templates via {{ site.myvariable }}.
 
 title: 20k Steps
-email: hello@20k-steps.org
+email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  This site provides documentations and guides on 20,000 steps walks and hikes.
+  Documentations on walks and hikes of 20,000 steps.
 domain: 20k-steps.github.io
 url: https://20k-steps.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: 
+github_username:  
 
 # Build settings
-theme: minima
+theme: jekyll-theme-so-simple
 plugins:
   - jekyll-feed
+
+logo: "assets/images/20k-steps.png"
+search_full_content: true
+copyright: "&copy; 20k Steps. All rights reserved."
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,58 @@
+<style type="text/css">
+  #map {
+    height: 600px;
+    width: 100%;
+  }
+</style>
+
+<script>
+function initMap() {
+  const center = mapConfig || {
+    zoom: 4,
+    center: {
+      lat: 1.3521,
+      lng: 103.8198
+    }
+  };
+  const map = new google.maps.Map(document.getElementById("map"), center);
+
+  if (markersConfig) {
+    for (let m in markersConfig) {
+      if (markersConfig.hasOwnProperty(m)) {
+        new google.maps.Marker({
+          position: markersConfig[m].position,
+          map: map,
+          label: markersConfig[m].label
+        });
+      }
+    };
+  }
+
+  if (pathConfig) {
+    const pathCoordinates = [];
+    for (let p = 0; p < pathConfig.length; p++) {
+      if (pathConfig[p].hasOwnProperty('lat') && pathConfig[p].hasOwnProperty('lng')) {
+        pathCoordinates.push({ lat: pathConfig[p].lat, lng: pathConfig[p].lng });
+      } else if (pathConfig[p].length == 2) {
+        pathCoordinates.push({ lat: pathConfig[p][0], lng: pathConfig[p][1] });
+      }
+    }
+
+    const path = new google.maps.Polyline({
+      path: pathCoordinates,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 1,
+    });
+
+    path.setMap(map);
+  }
+}
+
+window.initMap = initMap;
+</script>
+
+<div id="map"></div>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeROYpqKybf3hpDDBrFoEjEJnAw_Pldg4&callback=initMap&v=weekly"
+  defer></script>
