@@ -31,7 +31,8 @@ function initMap() {
   if (pathConfig) {
     const pathCoordinates = [];
     const markers = {}, infoWindows = {};
-    let lat = null, lng = null, markerLabel = null, infoWindowContent = null;
+    let lat = null, lng = null, markerLabel = null, markerIcon = null, infoWindowContent = null;
+
     for (let p = 0; p < pathConfig.length; p++) {
       lat = null, lng = null, markerLabel = null, infoWindowContent = null;
       if (pathConfig[p].hasOwnProperty('lat') && pathConfig[p].hasOwnProperty('lng')) {
@@ -52,10 +53,27 @@ function initMap() {
         pathCoordinates.push({ lat: lat, lng: lng });
 
         if (markerLabel) {
+          if (isNaN(markerLabel)) {
+            markerIcon = {
+              url: 'https://img.icons8.com/material-sharp/24/marker.png',
+              size: new google.maps.Size(24, 24),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(12, 24),
+            };
+          } else {
+            markerIcon = {
+              url: 'https://img.icons8.com/ios/50/' + markerLabel + '.png',
+              size: new google.maps.Size(50, 50),
+              scaledSize: new google.maps.Size(18, 18),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(9, 15),
+            };
+          }
+
           markers[p] = new google.maps.Marker({
             position: { lat: lat, lng: lng },
             map: map,
-            label: markerLabel
+            icon: markerIcon
           });
 
           if (pathConfig[p].hasOwnProperty('infoWindowContent')) {
@@ -82,7 +100,7 @@ function initMap() {
 
     const path = new google.maps.Polyline({
       path: pathCoordinates,
-      strokeColor: "#FF824A",
+      strokeColor: '#FF824A',
       strokeOpacity: 1.0,
       strokeWeight: 3,
     });

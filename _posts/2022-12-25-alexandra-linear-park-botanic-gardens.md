@@ -1,11 +1,32 @@
 ---
 layout: page
-title:  "Test Google Maps Javascript API"
+title:  "Alexandra Linear Park to Botanic Gardens via Orchard Road"
+image: 
+  path: https://www.nparks.gov.sg/-/media/nparks-real-content/gardens-parks-and-nature/park-connector-network/alexandra-pc/alexandra-park-connector1.ashx
 date:   2022-12-25 11:04:42 +0800
-categories: draft
+categories:
+  - sg
+tags:
+  - sg
+  - 20k
+  - one-way
 ---
-This page is a placeholder for testing Google Maps Javascript API.
 
+This route is an easy walk on flat paved ground, passing through a variety of neighbourhoods including some of Singapore's oldest housing estates, the downtown area, through Fort Canning Park, Orchard Road and finally the UNESCO World Heritage Botanic Gardens. Along the way are numerous rest stops and public toilets. The route can be lengthened at Clarke Quay, before crossing River Valley Road, by continuing along the river towards the Merlion and back. It can be shortened anywhere by hopping into a nearby MRT Station.
+
+&nbsp;
+&nbsp;
+### Route info
+
+| City | Singapore |
+| Start | Alexandra Linear Park (western most end) |
+| End | Botanic Gardens MRT Station (CC19/DT9) (Exit A) |
+| Distance | 12km |
+| Steps | 19-20k |
+  
+&nbsp;
+&nbsp;
+### Route map
 <script>
 const mapConfig = {
   zoom: 14,
@@ -97,7 +118,7 @@ const pathConfig = [
   [ 1.2913541462070761, 103.84383712983491 ],
   [ 1.2919427126310754, 103.84415036605525 ],
   [ 1.2920233321389185, 103.84403948611954 ],
-  [ 1.2923609268707856, 103.8442360466012, 'c', 'Cross River Valley Road via Fort Canning MRT station. Enter by Exit A and exit by Exit B.' ],
+  [ 1.2923609268707856, 103.8442360466012, 'c', 'River Valley Road crossing via Fort Canning MRT Station (DT20). Enter by Exit A and exit by Exit B.' ],
   [ 1.2925842952926305, 103.84437533140428, '5' ],
   [ 1.2927892196151656, 103.8444981278543 ],
   [ 1.2927237120205428, 103.84441748492303 ],
@@ -113,7 +134,7 @@ const pathConfig = [
   [ 1.296293619993239, 103.84532536345547 ],
   [ 1.2968047233616633, 103.84588726028343 ],
   [ 1.2969387644844022, 103.84635285198486 ],
-  [ 1.2973224958039282, 103.84641653684028, 'b', 'Cross Fort Canning Road via Fort Canning Park Tree Tunnel' ],
+  [ 1.2973224958039282, 103.84641653684028, 'b', 'Fort Canning Road crossing via Fort Canning Park Tree Tunnel' ],
   [ 1.2973379824190627, 103.84633219746058 ],
   [ 1.2976305128313246, 103.84627884000786 ],
   [ 1.2977027850903131, 103.8461049979205 ],
@@ -129,7 +150,7 @@ const pathConfig = [
   [ 1.3012260814913368, 103.83879981404526 ],
   [ 1.301794685562732, 103.83751410796137, '7' ],
   [ 1.3027102479360944, 103.83580645904817 ],
-  [ 1.3048055424825313, 103.8319301269419, 'a', 'Cross Paterson Road via ION Orchard underpass to Wheelock Place.' ],
+  [ 1.3048055424825313, 103.8319301269419, 'a', 'Paterson Road crossing via ION Orchard underpass to Wheelock Place.' ],
   [ 1.3047424895689026, 103.83184279987975 ],
   [ 1.305023799313597, 103.8312266717272 ],
   [ 1.3051450546856151, 103.83142558223946 ],
@@ -212,4 +233,20 @@ const pathConfig = [
 </script>
 
 {% include google-maps-js-api.html %}
+  
+&nbsp;
+&nbsp;
+### Getting there
+- By MRT: alight at Queenstown MRT Station (EW19) and exit by Exit C. The starting point is 200m away.
+- By car: enter SkyOasis @ Dawson (HDB) via Margaret Drive and park at multi-storey car park.
 
+
+&nbsp;
+&nbsp;
+### Returning
+- Take MRT at Botanic Gardens MRT Station (CC19/DT9) Circle Line towards Harbourfront direction (3 stops).
+- Change to East West Line at Buona Vista (CC22/EW21) towards Pasir Ris (2 stops).
+- Alight at Queenstown MRT Station (EW19).
+  
+&nbsp;
+&nbsp;
