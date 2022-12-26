@@ -244,7 +244,7 @@ const pathConfig = [
 &nbsp;
 &nbsp;
 ### Returning
-- Take MRT at Botanic Gardens MRT Station (CC19/DT9) Circle Line towards Harbourfront direction (3 stops).
+- Take MRT at Botanic Gardens MRT Station (CC19/DT9) Circle Line towards Harbourfront (3 stops).
 - Change to East West Line at Buona Vista (CC22/EW21) towards Pasir Ris (2 stops).
 - Alight at Queenstown MRT Station (EW19).
   
