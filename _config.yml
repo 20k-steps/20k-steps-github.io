@@ -57,3 +57,7 @@ copyright: "&copy; 20k Steps. All rights reserved."
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Commands:
+# $ bundle exec jekyll serve
+# $ git push

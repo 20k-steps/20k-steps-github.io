@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "Alexandra Linear Park to Botanic Gardens via Orchard Road"
-image: 
-  path: https://www.nparks.gov.sg/-/media/nparks-real-content/gardens-parks-and-nature/park-connector-network/alexandra-pc/alexandra-park-connector1.ashx
+title:  'Alexandra Linear Park to Botanic Gardens via Orchard Road'
+#image: 
+#  path: https://www.nparks.gov.sg/-/media/nparks-real-content/gardens-parks-and-nature/park-connector-network/alexandra-pc/alexandra-park-connector1.ashx
 date:   2022-12-25 11:04:42 +0800
 categories:
   - sg
@@ -12,7 +12,9 @@ tags:
   - one-way
 ---
 
-This route is an easy walk on flat paved ground, passing through a variety of neighbourhoods including some of Singapore's oldest housing estates, the downtown area, through Fort Canning Park, Orchard Road and finally the UNESCO World Heritage Botanic Gardens. Along the way are numerous rest stops and public toilets. The route can be lengthened at Clarke Quay, before crossing River Valley Road, by continuing along the river towards the Merlion and back. It can be shortened anywhere by hopping into a nearby MRT Station.
+This route is an easy walk on flat paved ground, passing through a variety of neighbourhoods including some of Singapore's oldest housing estates, the downtown area, through Fort Canning Park, Orchard Road and finally the UNESCO World Heritage Botanic Gardens. 
+
+Along the way are numerous rest stops and public toilets. The route can be lengthened at Clarke Quay, before crossing River Valley Road, by continuing along the river towards the Merlion and back. It can be shortened anywhere by hopping into a nearby MRT Station.
 
 &nbsp;
 &nbsp;
